@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maldova Visa Check - Check Your Visa Status</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>🌍 MALDOVA VISA CHECK</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#check">Check Status</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Welcome to Maldova Visa Portal</h2>
+            <p>Check your visa application status online in seconds</p>
+            <button class="cta-btn" onclick="scrollToCheck()">Check Now</button>
+        </div>
+    </section>
+
+    <!-- Visa Check Section -->
+    <section class="check-section" id="check">
+        <div class="container">
+            <h2>Check Your Visa Status</h2>
+            <p class="subtitle">Enter your application details to check the status</p>
+            
+            <div class="check-card">
+                <form id="visaForm">
+                    <!-- Application ID -->
+                    <div class="form-group">
+                        <label for="appId">Application ID:</label>
+                        <input type="text" id="appId" name="appId" placeholder="e.g., MALDOVA-2024-001234" required>
+                    </div>
+
+                    <!-- Passport Number -->
+                    <div class="form-group">
+                        <label for="passport">Passport Number:</label>
+                        <input type="text" id="passport" name="passport" placeholder="Enter your passport number" required>
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+
+                    <!-- Visa Type -->
+                    <div class="form-group">
+                        <label for="visaType">Visa Type:</label>
+                        <select id="visaType" name="visaType" required>
+                            <option value="">-- Select Visa Type --</option>
+                            <option value="tourist">Tourist Visa</option>
+                            <option value="student">Student Visa</option>
+                            <option value="work">Work Visa</option>
+                            <option value="business">Business Visa</option>
+                            <option value="family">Family Visa</option>
+                            <option value="retirement">Retirement Visa</option>
+                        </select>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn">Check Status</button>
+                </form>
+            </div>
+
+            <!-- Result Section -->
+            <div id="resultSection" class="result-section" style="display: none;">
+                <div id="resultCard" class="result-card">
+                    <div id="resultContent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>How do I check my visa status?</h3>
+                <p>Simply enter your Application ID, Passport Number, Date of Birth, and Visa Type in the form above. Click "Check Status" to view your application status instantly.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What is my Application ID?</h3>
+                <p>Your Application ID is provided in the confirmation email you received after submitting your visa application. It starts with "MALDOVA-"</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How long does it take to process a visa?</h3>
+                <p>Processing times vary by visa type: Tourist (5-7 days), Student (10-15 days), Work (15-30 days), Business (7-10 days)</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I track my application status?</h3>
+                <p>Yes! You can check your status anytime using this portal. Simply enter your details and you'll see the latest status of your application.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What if my status shows "Rejected"?</h3>
+                <p>If your application is rejected, you'll see the reason in the status details. You can contact our support team or reapply after addressing the issues.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is this website secure?</h3>
+                <p>Yes, this is the official Maldova Visa Portal. All your data is encrypted and secure. Never share your details on unofficial websites.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📍 Address</h3>
+                    <p>Immigration Department<br>Maldova, Republic of Maldova</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📞 Phone</h3>
+                    <p>+960 123-4567<br>+960 765-4321</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📧 Email</h3>
+                    <p>support@maldovavisa.gov.md<br>visacheck@maldova.gov.md</p>
+                </div>
+                <div class="contact-item">
+                    <h3>🕐 Hours</h3>
+                    <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 1:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Maldova Immigration Department. All rights reserved.</p>
+            <p>This is an official government website.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
